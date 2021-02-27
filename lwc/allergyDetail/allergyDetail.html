@@ -1,3 +1,58 @@
 <template>
-    <b>TEST****</b>
+  <template if:true={allergy}>
+    <div class="slds-grid slds-wrap">
+      <div class="slds-size_1-of-4">
+        <span class="lbl">Allergy Name</span>
+      </div>
+      <div class="slds-size_1-of-4">
+        <span>{allergy.Name}</span>
+      </div>
+      <div class="slds-size_1-of-4">
+        <span class="lbl">Allergy Type</span>
+      </div>
+
+      <div class="slds-size_1-of-4">
+        <span>{allergy.Allergy_Type__c}</span>
+      </div>
+
+      <div class="slds-size_1-of-4">
+        <span class="lbl">Allergy Start date</span>
+      </div>
+      <div class="slds-size_1-of-4">
+        <span>{allergy.Start_Date__c}</span>
+      </div>
+
+      <div class="slds-size_1-of-4">
+        <span class="lbl">Allergy End date</span>
+      </div>
+      <div class="slds-size_1-of-4">
+        <span>{allergy.End_Date__c}</span>
+      </div>
+
+      <div class="slds-size_1-of-4">
+        <span class="lbl">Severity</span>
+      </div>
+      <div class="slds-size_1-of-4">
+        <span>{allergy.Severity__c}</span>
+      </div>
+
+      <div class="slds-size_1-of-4">
+        <span class="lbl">Reaction notes</span>
+      </div>
+      <div class="slds-size_1-of-4">
+        <span>{allergy.Note__c}</span>
+      </div>
+
+      <div
+        class="slds-size_1-of-1 slds-align_absolute-center slds-m-top_x-large"
+      >
+        <button class="slds-button slds-button_success" onclick={handleClose}>
+          Close
+        </button>
+      </div>
+    </div>
+  </template>
+  <template if:false={allergy}>
+    <b>No data ... </b>
+  </template>
 </template>
