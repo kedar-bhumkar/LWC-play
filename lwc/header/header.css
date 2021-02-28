@@ -1,0 +1,9 @@
+.headerLbl{
+
+    color:rgb(17, 49, 233);
+    font-weight: bolder;
+}
+
+.highRisk {
+    color:red;
+}
